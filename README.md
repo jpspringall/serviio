@@ -13,9 +13,14 @@ Link on docker hub: [jpspringall/serviio](https://hub.docker.com/r/jpspringall/s
 
 Link on github: [jpspringall/docker-serviio](https://github.com/jpspringall/serviio)
 
+### Build Command
+
+ - docker buildx build --platform linux/amd64,linux/arm64,linux/arm/v7 -f Dockerfile -t jpspringall/serviio --push .
+
 ### Build Args
 
  - `VERSION` = 2.2 - serviio version
+
 
 ### Exposed Ports
 
