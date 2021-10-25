@@ -1,0 +1,19 @@
+version: "3"
+
+services:
+  serviio:
+    container_name: serviio
+    environment:
+      - PUID=1000
+      - PGID=100
+      - TZ=TZ/CODE
+    volumes:
+      - /etc/localtime:/etc/localtime
+      - /srv/dev-disk-by-uuid/Movies:/media
+      - /srv/dev-disk-by-uuid/DLNA/Library:/opt/serviio/library
+      - /srv/dev-disk-by-uuid/DLNA/Log:/opt/serviio/log
+      - /srv/dev-disk-by-uuid/DLNA/Plugins:/opt/serviio/plugins
+    ports:
+      - "23423:23423/tcp"
+      - "8895:8895/tcp"
+      - "1900:1900/udp"
