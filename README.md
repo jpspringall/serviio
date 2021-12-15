@@ -40,6 +40,7 @@ Link on github: [jpspringall/docker-serviio](https://github.com/jpspringall/serv
 
 ### Container Changelog (dd.mm.yy)
 
+ - **15.12.2021** - Update Serviio version to 2.2.1
  - **25.10.2021** - Update Debian buster slim image to allow ARM build
  - **01.10.2021** - Update Serviio version to 2.2
  - **19.03.2021** - Update FFMPEG to 4.3.2, add healthcheck (PR #19), cleanup volumes (mount only if you need it)
