@@ -19,7 +19,7 @@ Link on github: [jpspringall/docker-serviio](https://github.com/jpspringall/serv
 
 ### Build Args
 
- - `VERSION` = 2.2 - serviio version
+ - `VERSION` = 2.2.1 - serviio version
 
 
 ### Exposed Ports
