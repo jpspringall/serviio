@@ -16,7 +16,7 @@ RUN apt-get install -y --no-install-recommends openjdk-11-jre
 
 RUN	mkdir -p ~/src
 
-ARG SERVIIO_VERSION=2.2	
+ARG SERVIIO_VERSION=2.2.1	
 
 # Install Serviio
 RUN cd ~/src && wget http://download.serviio.org/releases/serviio-${SERVIIO_VERSION}-linux.tar.gz && \
