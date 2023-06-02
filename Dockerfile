@@ -5,18 +5,18 @@
 # or        docker run --rm --name serviio -t -i -p 23423:23423/tcp -p 8895:8895/tcp -p 1900:1900/udp riftbit/docker-serviio
 
 FROM debian:buster-slim
-MAINTAINER James S
+LABEL author="James S"
 
 # Install Dependencies
 RUN apt-get update && apt-get upgrade -y
-	
+
 RUN apt-get install -y wget nano ffmpeg x264 dcraw
 
 RUN apt-get install -y --no-install-recommends openjdk-11-jre
 
 RUN	mkdir -p ~/src
 
-ARG SERVIIO_VERSION=2.2.1	
+ARG SERVIIO_VERSION=2.3	
 
 # Install Serviio
 RUN cd ~/src && wget http://download.serviio.org/releases/serviio-${SERVIIO_VERSION}-linux.tar.gz && \
@@ -29,7 +29,7 @@ RUN cd ~/src && wget http://download.serviio.org/releases/serviio-${SERVIIO_VERS
   mkdir -p /opt/serviio/config && \
   mv ./serviio-${SERVIIO_VERSION}/* /opt/serviio && \
   chmod +x /opt/serviio/bin/serviio.sh
-  
+
 RUN  rm -rf ~/src
 
 #VOLUME ["/opt/serviio/library", "/opt/serviio/plugins", "/opt/serviio/log", "/opt/serviio/config", "/media", "/tmp"]
